@@ -32,9 +32,12 @@ function ComputerChoice() {
 /* Player Choice */
 
 function PlayerChoice() {
+       
+    let input = prompt("Please choose a number." + '\n' +
+        " 0 => Rock, 1 => Paper, 2 => Scissor."
+    );
 
-    const input = Number(prompt(`Please choose a number.
-        0 => Rock, 1 => Paper, 2 => Scissor.`));
+    input = (input === '') ? PlayerChoice() : Number(input)
 
     return choice[input];
 };
@@ -149,4 +152,4 @@ function playGame() {
 }
 
 // Call the function to play the game 5 rounds.
-playGame();
+// playGame();
